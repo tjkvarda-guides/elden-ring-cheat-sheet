@@ -327,7 +327,8 @@ var profilesKey = 'darksouls3_profiles';
                 f_tit: false,
                 f_gem: false,
                 f_cov: false,
-                f_misc: false
+                f_misc: false,
+                f_gesture: false
             };
     }
 
@@ -448,6 +449,7 @@ var profilesKey = 'darksouls3_profiles';
                     $(this).parent('h3').addClass('completed');// Hide heading for completed category
                     $($('#' + type + '_nav_totals_' + i)[0]).removeClass('in_progress').addClass('done');
                 } else {
+                    console.log(type);
                     this.innerHTML = $('#' + type + '_nav_totals_' + i)[0].innerHTML =  checked + '/' + count;
                     $(this).removeClass('done').addClass('in_progress');
                     $(this).parent('h3').removeClass('completed');// Show heading for not yet completed category
